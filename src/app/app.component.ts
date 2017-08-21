@@ -6,5 +6,43 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'emuas';
+  routes = [
+    {
+      icon: 'library_books',
+      route: '/',
+      title: 'Forum',
+    },
+    {
+      icon: 'library_books',
+      route: '/',
+      title: 'Groups',
+    },
+    {
+      icon: 'event_note',
+      route: '.',
+      title: 'Events',
+    },
+    {
+      icon: 'today',
+      route: '.',
+      title: 'Bookings',
+    },
+    {
+      icon: 'person',
+      route: '.',
+      title: 'Members',
+    },
+  ];
+  usermenu: Object[] = [
+    {
+      icon: 'tune',
+      route: '.',
+      title: 'Account settings',
+    },
+    {
+      icon: 'exit_to_app',
+      route: '.',
+      title: 'Sign out',
+    },
+  ];
 }

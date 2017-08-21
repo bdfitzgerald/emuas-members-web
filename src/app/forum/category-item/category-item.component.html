@@ -1,0 +1,11 @@
+<a [routerLink]="category.name | kebabcase">
+  <md-list-item dense flex>
+    <md-icon md-list-icon [ngClass]="category.color">{{category.icon}}</md-icon>
+    <h4 md-line>{{category.name | titlecase }}</h4>
+    <p md-line> {{category.description}} </p>
+    <span></span>
+    <td-notification-count [notifications]="category.notifications">
+    </td-notification-count>
+  </md-list-item>
+  <md-divider></md-divider>
+</a>

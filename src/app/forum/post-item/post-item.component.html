@@ -1,0 +1,14 @@
+<a [routerLink]="post.name | kebabcase">
+  <md-list-item dense flex>
+    <md-icon md-list-icon [ngClass]="{'tc-red-700': post.unread}">{{post.icon}}</md-icon>
+    <h4 md-line>{{post.name }}</h4>
+    <p md-line> {{post.author.name}} - {{post.date | date }} </p>
+    <span></span>
+    <button md-icon-button>
+      <td-notification-count class="read" [notifications]="post.messages">
+        <md-icon>message</md-icon>
+      </td-notification-count>
+    </button>
+  </md-list-item>
+  <md-divider></md-divider>
+</a>

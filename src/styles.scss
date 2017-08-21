@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+$primary: #D32F2F;
+$accent: #FFC107;
+
+.content.md-content {
+    margin-top: -1px;
+}
+
+.read .td-notification-count.mat-warn {
+    background-color: #EEE;
+    color: #333
+}

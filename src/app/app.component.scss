@@ -1,0 +1,23 @@
+
+$small-screen: 740px !default;
+$large-screen: 1412px !default;
+
+$range : $large-screen - $small-screen !default;
+$intervals: 20 !default;
+$interval-size: $range / $intervals !default;
+
+.flow-text{
+    font-weight: 300;
+    $i: 0;
+    @while $i <= $intervals {
+        @media only screen and (min-width : 360 + ($i * $interval-size)) {
+            font-size: 1.2rem * (1 + (.02 * $i));
+        }
+        $i: $i + 1;
+    }
+
+    // Handle below 360px screen
+    @media only screen and (max-width: 360px) {
+        font-size: 1.2rem;
+    }
+}
